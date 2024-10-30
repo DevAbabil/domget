@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary: 15, 23, 42;
+  --secondary: 248, 191, 166;
+  --text: 203, 213, 225;
+  --gray: 229, 231, 235;
+}

@@ -4,27 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get DOM element and manipulate it easily</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1 id="Ok" class="heading">Hello world</h1>
-    <ul>
-      <li>
-        <a href="https://domget.surge.sh/js/v1.js"
-          >https://domget.surge.sh/js/v1.js</a
-        >
-      </li>
-      <li>
-        <a href="https://domget.vercel.app/js/v1.js"
-          >https://domget.vercel.app/js/v1.js</a
-        >
-      </li>
-      <li>
-        <a href="https://domget.netlify.app/js/v1.js"
-          >https://domget.netlify.app/js/v1.js</a
-        >
-      </li>
-    </ul>
-    <script src="./js/v1.js"></script>
+    <div>
+      <div class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        <div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div>
+      </div>
+    </div>
+    <main>
+      <div class="container mx-auto my-0">
+        <div class="w-[785px] mx-auto mt-[20px]">
+          <div>
+            <h2 class="font-bold text-xl">DOMget Source</h2>
+            <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">use any of these</div>
+            <div id="code_html" class="h-[295px]">Loading...</div>
+          </div>
+          <div class="mt-[20px] relative">
+            <div class="font-bold text-xl">HTML startup template</div>
+            <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">index.html</div>
+            <pre class="relative"><code class="whitespace-pre mt-[10px]">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Manipulate DOM like dream 😊&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+    &lt;p id=&quot;my_id&quot;&gt;Hello dear!&lt;/p&gt;
+    &lt;h2&gt;This is h2 tag&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li class=&quot;first-item&quot;&gt;I am Ababil&lt;/li&gt;
+      &lt;li custom_attribute=&quot;atributeA&quot;&gt;age 21&lt;/li&gt;
+      &lt;li&gt;JavaScript Programmer&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;!-- include [DOMget source] before other script tags  --&gt;
+    &lt;script src=&quot;https://domget.surge.sh/js/v1.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;./index.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+          </div>
+          <div class="mt-[20px] relative">
+            <div class="font-bold text-xl">Inside your JavaScript file</div>
+            <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">index.js</div>
+            <pre><code>
+console.log($("h2").innerText); // This is h2 tag
+console.log($("ul li")); // NodeList(3) [li.first-item, li, li]
+console.log($("#my_id").innerText); // Hello dear!
+console.log($(".first-item").innerText); // I am Ababil
+console.log($("[custom_attribute='atributeA']").innerText); // age 21      
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- scripts -->
+    <script src="https://domget.surge.sh/js/v1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
