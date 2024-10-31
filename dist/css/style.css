@@ -559,18 +559,6 @@ video {
 .top-\[10px\] {
   top: 10px;
 }
-.top-\[30px\] {
-  top: 30px;
-}
-.top-\[100px\] {
-  top: 100px;
-}
-.top-\[90px\] {
-  top: 90px;
-}
-.top-\[80px\] {
-  top: 80px;
-}
 .-z-10 {
   z-index: -10;
 }
@@ -585,23 +573,24 @@ video {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.ml-\[30px\] {
-  margin-left: 30px;
+.my-\[10px\] {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .mt-\[10px\] {
   margin-top: 10px;
 }
-.mt-20 {
-  margin-top: 5rem;
-}
 .mt-\[20px\] {
   margin-top: 20px;
 }
-.mt-\[5px\] {
-  margin-top: 5px;
+.flex {
+  display: flex;
 }
-.mt-\[15px\] {
-  margin-top: 15px;
+.inline-flex {
+  display: inline-flex;
+}
+.h-\[295px\] {
+  height: 295px;
 }
 .h-\[310px\] {
   height: 310px;
@@ -609,59 +598,31 @@ video {
 .h-full {
   height: 100%;
 }
-.h-\[290px\] {
-  height: 290px;
-}
-.h-\[295px\] {
-  height: 295px;
-}
 .w-\[310px\] {
   width: 310px;
-}
-.w-\[680px\] {
-  width: 680px;
-}
-.w-full {
-  width: 100%;
-}
-.w-\[685px\] {
-  width: 685px;
-}
-.w-\[700px\] {
-  width: 700px;
-}
-.w-\[730px\] {
-  width: 730px;
-}
-.w-\[750px\] {
-  width: 750px;
-}
-.w-\[780px\] {
-  width: 780px;
 }
 .w-\[785px\] {
   width: 785px;
 }
+.w-full {
+  width: 100%;
+}
 .list-decimal {
   list-style-type: decimal;
 }
-.list-\[roman\] {
-  list-style-type: roman;
+.gap-x-1 {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 .whitespace-normal {
   white-space: normal;
 }
 .whitespace-pre {
   white-space: pre;
-}
-.whitespace-pre-line {
-  white-space: pre-line;
-}
-.whitespace-pre-wrap {
-  white-space: pre-wrap;
-}
-.whitespace-break-spaces {
-  white-space: break-spaces;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -703,33 +664,22 @@ video {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.\!px-\[10px\] {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-}
-.\!py-\[5px\] {
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-center {
+  text-align: center;
 }
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .font-bold {
   font-weight: 700;
 }
 .text-\[rgba\(var\(--mark\)\2c 1\)\] {
   color: rgba(var(--mark),1);
-}
-.text-\[rgba\(var\(--text\)\)\] {
-  color: rgba(var(--text));
-}
-.text-\[rgba\(var\(--primary\)\)\] {
-  color: rgba(var(--primary));
 }
 .text-\[rgba\(var\(--primary\)\2c 0\.5\)\] {
   color: rgba(var(--primary),0.5);
