@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/highlightjs.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="overflow-hidden">
+  <body class="overflow-hidden [@media(max-width:839px)]:overflow-hidden">
     <div>
       <div class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
         <div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div>
@@ -18,7 +18,7 @@
       <div class="size-[100px] border-t-[4px] border-b-[4px] border-[rgba(var(--text))] rounded-full spin-loader"></div>
       <div class="text-2xl font-bold text-[rgba(var(--text),1)]">Loading...</div>
     </div>
-    <div id="low_screen" class="fixed inset-0 z-10 h-full w-full top-0 left-0 bg-[white] flex justify-center items-center flex-col gap-y-[2px] [@media(max-width:839px)]:flex [@media(max-width:839px)]:overflow-x-hidden">
+    <div id="low_screen" class="fixed inset-0 z-10 h-full w-full top-0 left-0 bg-[white] justify-center items-center flex-col gap-y-[2px] hidden [@media(max-width:839px)]:flex [@media(max-width:839px)]:overflow-x-hidden">
       <div class="text-2xl font-bold text-[rgba(var(--text),1)] text-center">Your screen width should be greater or equal than 840px</div>
     </div>
     <main>

@@ -532,9 +532,6 @@ video {
 .mt-\[5px\]{
   margin-top: 5px;
 }
-.block{
-  display: block;
-}
 .flex{
   display: flex;
 }
@@ -780,22 +777,10 @@ video {
   .\[\@media\(max-width\:839px\)\]\:flex{
     display: flex;
   }
+  .\[\@media\(max-width\:839px\)\]\:overflow-hidden{
+    overflow: hidden;
+  }
   .\[\@media\(max-width\:839px\)\]\:overflow-x-hidden{
-    overflow-x: hidden;
-  }
-}
-
-@media(max-width:840px){
-  .\[\@media\(max-width\:840px\)\]\:block{
-    display: block;
-  }
-  .\[\@media\(max-width\:840px\)\]\:flex{
-    display: flex;
-  }
-  .\[\@media\(max-width\:840px\)\]\:hidden{
-    display: none;
-  }
-  .\[\@media\(max-width\:840px\)\]\:overflow-x-hidden{
     overflow-x: hidden;
   }
 }
