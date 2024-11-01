@@ -67,7 +67,18 @@ const copyToClipBoard = (value, context = "") => {
 
 const removeLoaderId = setTimeout(() => {
   $("#loader").remove();
-  $("body").classList.add("overflow-auto");
   $("body").classList.remove("overflow-hidden");
   clearTimeout(removeLoaderId);
 }, 1000);
+
+$("#low_screen").classList.add("hidden");
+window.addEventListener("resize", (e) => {
+  if (e.currentTarget.innerWidth < 840) {
+    $("#low_screen").classList.remove("hidden");
+    $("body").classList.add("overflow-hidden");
+  } else {
+    $("body").classList.add("overflow-auto");
+    $("#low_screen").classList.add("hidden");
+    $("body").classList.remove("overflow-hidden");
+  }
+});
