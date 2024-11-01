@@ -52,3 +52,5 @@ console.log($("#my_id").innerText); // Hello dear!
 console.log($(".first-item").innerText); // I am Ababil
 console.log($("[custom_attribute='atributeA']").innerText); // age 21
 ```
+
+### [Read the Full Documentation](https://domget.netlify.app/)
