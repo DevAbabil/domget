@@ -28,7 +28,7 @@ const codeHtml = Object.entries(domgetModuleSource)
           <pre><code class="whitespace-normal">
             &lt;script src="${src}"&gt;&lt;/script&gt;
           </code></pre>
-          <button domgetModuleSource="${key}" type="button" class="copy_button absolute top-[10px] right-[10px] font-bold bg-[rgba(var(--primary),0.3)] text-[rgba(var(--mark),1)] px-[10px] py-[5px] text-xl rounded-md">
+          <button domgetModuleSource="${key}" type="button" class="copy_button absolute top-[4px] right-[4px] font-bold bg-[rgba(var(--primary),0.3)] text-[rgba(var(--mark),1)] px-[10px] py-[5px] text-xl rounded-md">
              <i class="fa-solid fa-copy"></i> 
           </button>
       </div>
@@ -38,9 +38,9 @@ const codeHtml = Object.entries(domgetModuleSource)
   .join("");
 
 const DOMgetModulSettimouteId = setTimeout(() => {
-  $("#code_html").innerHTML = `<ol class="list-decimal">${codeHtml}</ol>`;
+  $("#code_html").innerHTML = `<ol class="list-decimal p-6">${codeHtml}</ol>`;
   copyButton();
-  // reinitiate highlightjs after display domgetModuleSource list
+  // initiate highlightjs after display domgetModuleSource list
   hljs.highlightAll();
   clearInterval(DOMgetModulSettimouteId);
 }, 200);
@@ -64,3 +64,10 @@ const copyToClipBoard = (value, context = "") => {
   navigator.clipboard.writeText(tempInput.value);
   toast(`Succesfully copied ${context}`);
 };
+
+const removeLoaderId = setTimeout(() => {
+  $("#loader").remove();
+  $("body").classList.add("overflow-auto");
+  $("body").classList.remove("overflow-hidden");
+  clearTimeout(removeLoaderId);
+}, 1000);
