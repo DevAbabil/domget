@@ -10,16 +10,32 @@
   </head>
   <body class="overflow-hidden [@media(max-width:839px)]:overflow-hidden">
     <div>
-      <div class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
-        <div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div>
+      <div
+        class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
+      >
+        <div
+          class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"
+        ></div>
       </div>
     </div>
-    <div id="loader" class="fixed inset-0 z-10 h-full w-full top-0 left-0 bg-[white] flex justify-center items-center flex-col gap-y-[2px]">
-      <div class="size-[100px] border-t-[4px] border-b-[4px] border-[rgba(var(--text))] rounded-full spin-loader"></div>
-      <div class="text-2xl font-bold text-[rgba(var(--text),1)]">Loading...</div>
+    <div
+      id="loader"
+      class="fixed inset-0 z-10 h-full w-full top-0 left-0 bg-[white] flex justify-center items-center flex-col gap-y-[2px]"
+    >
+      <div
+        class="size-[100px] border-t-[4px] border-b-[4px] border-[rgba(var(--text))] rounded-full spin-loader"
+      ></div>
+      <div class="text-2xl font-bold text-[rgba(var(--text),1)]">
+        Loading...
+      </div>
     </div>
-    <div id="low_screen" class="fixed inset-0 z-10 h-full w-full top-0 left-0 bg-[white] justify-center items-center flex-col gap-y-[2px] hidden [@media(max-width:839px)]:flex [@media(max-width:839px)]:overflow-x-hidden">
-      <div class="text-2xl font-bold text-[rgba(var(--text),1)] text-center">Your screen width should be greater than or equal to 840px</div>
+    <div
+      id="low_screen"
+      class="fixed inset-0 z-10 h-full w-full top-0 left-0 bg-[white] justify-center items-center flex-col gap-y-[2px] hidden [@media(max-width:839px)]:flex [@media(max-width:839px)]:overflow-x-hidden"
+    >
+      <div class="text-2xl font-bold text-[rgba(var(--text),1)] text-center">
+        Your screen width should be greater than or equal to 840px
+      </div>
     </div>
     <main>
       <div class="container mx-auto my-0">
@@ -28,24 +44,43 @@
             <li>
               <a href="/">
                 <div class="w-[35px] select-none">
-                  <img src="./images/favicon.png" alt="" class="max-w-full h-auto" />
+                  <img
+                    src="./images/favicon.png"
+                    alt=""
+                    class="max-w-full h-auto"
+                  />
                 </div>
               </a>
             </li>
             <li>
-              <a href="https://gitfront.io/r/devababil/rnjMhmwDqds7/domget/" target="_blank" class="text-2xl"
+              <a
+                href="https://gitfront.io/r/devababil/rnjMhmwDqds7/domget/"
+                target="_blank"
+                class="text-2xl"
                 ><span><i class="fa-brands fa-github"></i></span
               ></a>
             </li>
-            <li><a href="https://devababil.com" target="_blank" class="text-2xl select-none">❤️</a></li>
+            <li>
+              <a
+                href="https://devababil.com"
+                target="_blank"
+                class="text-2xl select-none"
+                >❤️</a
+              >
+            </li>
           </ul>
         </div>
         <div class="w-[785px] mx-auto mt-[20px]">
           <div class="mt-[20px] relative">
             <div class="font-bold text-2xl">
-              <span class="text-[#ff0000e1]"><i class="fa-solid fa-triangle-exclamation"></i></span> Instead of doing these
+              <span class="text-[#ff0000e1]"
+                ><i class="fa-solid fa-triangle-exclamation"></i
+              ></span>
+              Instead of doing these
             </div>
-            <pre class="relative"><code class="whitespace-pre">let myId = document.getElementById();
+            <pre
+              class="relative"
+            ><code class="whitespace-pre">let myId = document.getElementById();
 let myClass = document.getElementsByClassName();
 let myName = document.getElementsByName();
 let myTag = document.getElementsByTagName();
@@ -55,30 +90,63 @@ let myElements = document.querySelectorAll();</code></pre>
           </div>
           <div class="mt-[20px] relative">
             <div class="font-bold text-2xl">
-              <span class="text-[#09ff00e1]"><i class="fa-solid fa-check"></i></span> Go with <span class="text-pink-500">KISS 😘</span> <span class="text-[#8080802a] select-none italic">Keep It Simple Stupid</span>
+              <span class="text-[#09ff00e1]"
+                ><i class="fa-solid fa-check"></i
+              ></span>
+              Go with <span class="text-pink-500">KISS 😘</span>
+              <span class="text-[#8080802a] select-none italic"
+                >Keep It Simple Stupid</span
+              >
             </div>
-            <pre class="relative"><code class="whitespace-pre">let allInOne = $("&lt;Your Query Selector&gt;");</code></pre>
+            <pre
+              class="relative"
+            ><code class="whitespace-pre">let allInOne = $("&lt;Your Query Selector&gt;");</code></pre>
           </div>
 
           <div class="mt-[25px]">
-            <h2 class="font-bold text-4xl text-center">So, what is <span class="text-red-600">DOMget</span>?</h2>
-            <p class="mt-2"><span class="font-bold">DOMet</span> is a simple javascript library. that can help you to geting HTML element from html file to your JavaScript file. If you use DOMget library, you do don't need to use others DOM method anymore.</p>
+            <h2 class="font-bold text-4xl text-center">
+              So, what is <span class="text-red-600">DOMget</span>?
+            </h2>
+            <p class="mt-2">
+              <span class="font-bold">DOMet</span> is a simple javascript
+              library. that can help you to geting HTML element from html file
+              to your JavaScript file. If you use DOMget library, you do don't
+              need to use others DOM method anymore.
+            </p>
           </div>
 
           <div class="mt-[25px]">
             <h2 class="font-bold text-4xl text-center">How to use?</h2>
-            <p class="mt-2">First you need to include <span class="text-[rgba(var(--primary))] font-bold">DOMget source</span> inside your <span class="text-[rgba(var(--primary))] font-bold">HTML</span> file.</p>
-            <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">Use any of these ⬇️</div>
+            <p class="mt-2">
+              First you need to include
+              <span class="text-[rgba(var(--primary))] font-bold"
+                >DOMget source</span
+              >
+              inside your
+              <span class="text-[rgba(var(--primary))] font-bold">HTML</span>
+              file.
+            </p>
+            <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">
+              Use any of these ⬇️
+            </div>
             <div id="code_html">Loading...</div>
             <div class="mt-[17px] text-[brown]">
-              <span class="text-[#ff2525]"><i class="fa-solid fa-triangle-exclamation"></i></span> You must have to include [DOMget source] before all the other script tags. Or, before your own &lt;script.js&gt; file sources.
+              <span class="text-[#ff2525]"
+                ><i class="fa-solid fa-triangle-exclamation"></i
+              ></span>
+              You must have to include [DOMget source] before all the other
+              script tags. Or, before your own &lt;script.js&gt; file sources.
             </div>
           </div>
 
           <div class="mt-[20px] relative">
             <div class="font-bold text-xl">HTML startup template</div>
-            <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">index.html</div>
-            <pre class="relative"><code class="whitespace-pre">&lt;!DOCTYPE html&gt;
+            <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">
+              index.html
+            </div>
+            <pre
+              class="relative"
+            ><code class="whitespace-pre">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -103,8 +171,16 @@ let myElements = document.querySelectorAll();</code></pre>
           </div>
           <div class="mt-[20px] relative">
             <div class="font-bold text-xl">Inside your JavaScript file</div>
-            <p class="mt-1">With DOMget library, you have to call a function <span class="font-bold">$("&lt;query selector&gt;")</span> and inside this function you have to provide a query selector string as a argument. After that, this function will return you to desired html element or a NodeList.</p>
-            <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">index.js</div>
+            <p class="mt-1">
+              With DOMget library, you have to call a function
+              <span class="font-bold">$("&lt;query selector&gt;")</span> and
+              inside this function you have to provide a query selector string
+              as a argument. After that, this function will return you to
+              desired html element or a NodeList.
+            </p>
+            <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">
+              index.js
+            </div>
             <pre><code>console.log($("h2").innerText); // This is h2 tag
 console.log($("ul li")); // NodeList(3) [li.first-item, li, li]
 console.log($("#my_id").innerText); // Hello dear!
@@ -113,18 +189,32 @@ console.log($("[custom_attribute='atributeA']").innerText); // age 21      </cod
           </div>
           <div class="mt-[20px]">
             <h2 class="font-bold text-4xl text-center">Be cautious about!</h2>
-            <div class="font-bold text-xl">You might get <span class="text-[red]">errors</span> when;-</div>
+            <div class="font-bold text-xl">
+              You might get <span class="text-[red]">errors</span> when;-
+            </div>
             <ol class="mt-[5px] bg-[#ffd90027] p-6 rounded-b-md">
-              <li class="list-decimal"><span class="font-bold">$("")</span> Function are called, but no query selector's are provided!</li>
-              <li class="list-decimal"><span class="font-bold">$("")</span> Function are called, but no element found with your selector!</li>
-              <li class="list-decimal"><span class="font-bold">$("")</span> Function are called, but there was multiple element with same id selector!</li>
+              <li class="list-decimal">
+                <span class="font-bold">$("")</span> Function are called, but no
+                query selector's are provided!
+              </li>
+              <li class="list-decimal">
+                <span class="font-bold">$("")</span> Function are called, but no
+                element found with your selector!
+              </li>
+              <li class="list-decimal">
+                <span class="font-bold">$("")</span> Function are called, but
+                there was multiple element with same id selector!
+              </li>
             </ol>
           </div>
         </div>
       </div>
       <div>
         <p class="text-center py-[20px]">
-          &copy; All right reserved by <a href="http://devababil.com"><span class="font-bold">Ababil</span></a>
+          &copy; All right reserved by
+          <a href="http://devababil.com"
+            ><span class="font-bold">Ababil</span></a
+          >
         </p>
       </div>
     </main>
@@ -132,7 +222,11 @@ console.log($("[custom_attribute='atributeA']").innerText); // age 21      </cod
     <!-- scripts -->
     <script src="https://domget.surge.sh/js/v1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="https://mpvbackend.vercel.app/mpv.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
