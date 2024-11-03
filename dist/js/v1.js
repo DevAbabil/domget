@@ -19,16 +19,21 @@ var $ = (qSelector) => {
     displayError($msg);
     throw Error($msg);
   }
+
   if (
     [...elements].filter((element) => {
-      if (element.id && element.id === qSelector) {
-        return true;
+      if (element.hasAttribute("id")) {
+        const idOnly =
+          qSelector.charAt(0) === "#"
+            ? qSelector.slice(1, qSelector.length)
+            : null;
+        return idOnly === element.getAttribute("id") ? true : false;
       }
     }).length > 1
   ) {
     let $msg = `Duplicate id found with query '${qSelector}'`;
     displayError($msg);
-    throw Error(msg);
+    throw Error($msg);
   }
   if (elements.length === 1) {
     return elements[0];
