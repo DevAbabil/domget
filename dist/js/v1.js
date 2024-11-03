@@ -21,7 +21,7 @@ var $ = (qSelector) => {
   }
   if (
     [...elements].filter((element) => {
-      if (element.id) {
+      if (element.id && element.id === qSelector) {
         return true;
       }
     }).length > 1
