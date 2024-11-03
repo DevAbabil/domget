@@ -48,11 +48,17 @@ const DOMgetModulSettimouteId = setTimeout(() => {
 const copyButton = () => {
   $(".copy_button").forEach((button) => {
     button.addEventListener("click", (e) => {
-      const button = e.target.localName !== "button" ? e.target.parentNode : e.target;
+      const button =
+        e.target.localName !== "button" ? e.target.parentNode : e.target;
 
-      const domgetSourceLink = `<script src="${domgetModuleSource[button.getAttribute("domgetModuleSource")]}"></script>`;
+      const domgetSourceLink = `<script src="${
+        domgetModuleSource[button.getAttribute("domgetModuleSource")]
+      }"></script>`;
 
-      copyToClipBoard(domgetSourceLink, button.getAttribute("domgetModuleSource").split("_").join(" "));
+      copyToClipBoard(
+        domgetSourceLink,
+        button.getAttribute("domgetModuleSource").split("_").join(" ")
+      );
     });
   });
 };
