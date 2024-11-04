@@ -32,7 +32,7 @@
     <main>
       <div class="container mx-auto my-0">
         <div class="text-center">
-          <ul class="inline-flex gap-x-2 my-[10px]">
+          <ul class="inline-flex items-center gap-x-2 my-[10px]">
             <li>
               <a href="/">
                 <div class="w-[35px] select-none">
@@ -95,7 +95,8 @@ let myElements = document.querySelectorAll();</code></pre>
           <div class="mt-[20px] relative">
             <div class="font-bold text-xl">HTML startup template</div>
             <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">index.html</div>
-            <pre class="relative"><code class="whitespace-pre">&lt;!DOCTYPE html&gt;
+            <div class="relative">
+              <pre class="relative"><code class="whitespace-pre">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -117,6 +118,10 @@ let myElements = document.querySelectorAll();</code></pre>
     &lt;script src=&quot;./index.js&quot;&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+              <button type="button" class="absolute top-[5px] right-[4px] font-bold bg-[rgba(var(--primary),0.3)] text-[rgba(var(--mark),1)] px-[10px] py-[5px] text-xl rounded-md" id="index-html">
+                <i class="fa-solid fa-copy"></i>
+              </button>
+            </div>
           </div>
           <div class="mt-[20px] relative">
             <div class="font-bold text-xl">Inside your JavaScript file</div>
@@ -125,11 +130,16 @@ let myElements = document.querySelectorAll();</code></pre>
               <span class="font-bold">$("&lt;query selector&gt;")</span> and inside this function you have to provide a query selector string as a argument. After that, this function will return you to desired html element or a NodeList.
             </p>
             <div class="font-bold text-md text-[rgba(var(--primary),0.5)]">index.js</div>
-            <pre><code>console.log($("h2").innerText); // This is h2 tag
+            <div class="relative">
+              <pre><code>console.log($("h2").innerText); // This is h2 tag
 console.log($("ul li")); // NodeList(3) [li.first-item, li, li]
 console.log($("#my_id").innerText); // Hello dear!
 console.log($(".first-item").innerText); // I am Ababil
 console.log($("[custom_attribute='atributeA']").innerText); // age 21      </code></pre>
+              <button type="button" class="absolute top-[5px] right-[4px] font-bold bg-[rgba(var(--primary),0.3)] text-[rgba(var(--mark),1)] px-[10px] py-[5px] text-xl rounded-md" id="index-js">
+                <i class="fa-solid fa-copy"></i>
+              </button>
+            </div>
           </div>
           <div class="mt-[20px]">
             <h1 class="font-bold text-4xl text-center">Be cautious about!</h1>
@@ -138,6 +148,7 @@ console.log($("[custom_attribute='atributeA']").innerText); // age 21      </cod
               <li class="list-decimal"><span class="font-bold">$("")</span> Function are called, but no query selector's are provided!</li>
               <li class="list-decimal"><span class="font-bold">$("")</span> Function are called, but no element found with your selector!</li>
               <li class="list-decimal"><span class="font-bold">$("")</span> Function are called, but there was multiple element with same id selector!</li>
+              <li class="list-decimal"><span class="font-bold">$("")</span> Function are called, but there was Invalid query selectors are provided!</li>
             </ol>
           </div>
         </div>
@@ -149,6 +160,7 @@ console.log($("[custom_attribute='atributeA']").innerText); // age 21      </cod
         </p>
       </div>
     </main>
+
     <!-- scripts -->
     <script src="https://domget.surge.sh/js/v1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>

@@ -1,44 +1,43 @@
-/*****************************************************
- * Title       : DOMget library                      *
- * Description : for manipulate dom like a dream     *
- * Version     : 1                                   *
- * Author      : Md Ababil Hossain                   *
- * Site URL    : https://domget.netlify.app          *
- * Date        : Oct 29, 2024                        *
- *****************************************************/
+/*******************************************************
+ * Title         : DOMget library                      *
+ * Description   : for manipulate dom like a dream     *
+ * Version       : 1                                   *
+ * Author        : Md Ababil Hossain                   *
+ * Site URL      : https://domget.netlify.app          *
+ * Creation Date : Oct 29, 2024                        *
+ * Last Modified : Nov 05, 2024                        *
+ *******************************************************/
 
 var $ = (qSelector) => {
-  if (!qSelector) {
-    let $msg = `Query selector is required! You have called $() but did not provide any query selector`;
-    displayError($msg);
-    throw Error($msg);
+  try {
+    if (!qSelector) {
+      let $msg = `Query selector is required! You have called $() but did not provide any query selector`;
+      throw Error($msg);
+    }
+    const elements = document.querySelectorAll(qSelector);
+    if (elements.length === 0) {
+      let $msg = `No element found with selector '${qSelector}'`;
+      throw Error($msg);
+    }
+    if (
+      [...elements].filter((element) => {
+        if (element.hasAttribute("id")) {
+          const idOnly = qSelector.charAt(0) === "#" ? qSelector.slice(1, qSelector.length) : null;
+          return idOnly === element.getAttribute("id") ? true : false;
+        }
+      }).length > 1
+    ) {
+      let $msg = `Duplicate id found with query '${qSelector}'`;
+      throw Error($msg);
+    }
+    return elements.length === 1 ? elements[0] : elements;
+  } catch (error) {
+    if (error.message.includes(atob("RmFpbGVkIHRvIGV4ZWN1dGUgJ3F1ZXJ5U2VsZWN0b3JBbGwnIG9uICdEb2N1bWVudCc="))) {
+      displayError(error.message.replace(error.message.slice(0, 52), ""));
+    } else {
+      displayError(error.message);
+    }
   }
-  const elements = document.querySelectorAll(qSelector);
-  if (elements.length === 0) {
-    let $msg = `No element found with selector '${qSelector}'`;
-    displayError($msg);
-    throw Error($msg);
-  }
-
-  if (
-    [...elements].filter((element) => {
-      if (element.hasAttribute("id")) {
-        const idOnly =
-          qSelector.charAt(0) === "#"
-            ? qSelector.slice(1, qSelector.length)
-            : null;
-        return idOnly === element.getAttribute("id") ? true : false;
-      }
-    }).length > 1
-  ) {
-    let $msg = `Duplicate id found with query '${qSelector}'`;
-    displayError($msg);
-    throw Error($msg);
-  }
-  if (elements.length === 1) {
-    return elements[0];
-  }
-  return elements;
 };
 
 function displayError(message) {
@@ -54,10 +53,7 @@ function displayError(message) {
   msg.innerHTML = `
     <div class="msg-contentainer">
       <div class="msg-title">Error :</div>
-      <div class="msg-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-        corrupti!
-      </div>
+      <div class="msg-content"></div>
       <div class="console">See the console for more details.</div>
     </div>
   `;

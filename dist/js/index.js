@@ -21,7 +21,7 @@ const toast = (message) => {
 
 const codeHtml = Object.entries(domgetModuleSource)
   .map(([key, src]) => {
-    return `
+    return /*html*/ `
     <li class="domgetModuleSource mt-[10px] border p-1 bg-[rgba(var(--primary),0.07)] backdrop-blur-sm">
       <h2 class="font-bold">${key.split("_").join(" ")} :</h2>  
       <div class="relative">
@@ -48,23 +48,15 @@ const DOMgetModulSettimouteId = setTimeout(() => {
 const copyButton = () => {
   $(".copy_button").forEach((button) => {
     button.addEventListener("click", (e) => {
-      const button =
-        e.target.localName !== "button" ? e.target.parentNode : e.target;
-
-      const domgetSourceLink = `<script src="${
-        domgetModuleSource[button.getAttribute("domgetModuleSource")]
-      }"></script>`;
-
-      copyToClipBoard(
-        domgetSourceLink,
-        button.getAttribute("domgetModuleSource").split("_").join(" ")
-      );
+      const button = e.target.localName !== "button" ? e.target.parentNode : e.target;
+      const domgetSourceLink = `<script src="${domgetModuleSource[button.getAttribute("domgetModuleSource")]}"></script>`;
+      copyToClipBoard(domgetSourceLink, `DOMget source ${button.getAttribute("domgetModuleSource").split("_").join(" ")}`);
     });
   });
 };
 
 const copyToClipBoard = (value, context = "") => {
-  const tempInput = document.createElement("input");
+  const tempInput = document.createElement("textarea");
   tempInput.value = value;
   tempInput.select();
   navigator.clipboard.writeText(tempInput.value);
@@ -87,4 +79,43 @@ window.addEventListener("resize", (e) => {
     $("#low_screen").classList.add("hidden");
     $("body").classList.remove("overflow-hidden");
   }
+});
+
+$("#index-js").addEventListener("click", () => {
+  copyToClipBoard(
+    `console.log($("h2").innerText); // This is h2 tag
+console.log($("ul li")); // NodeList(3) [li.first-item, li, li]
+console.log($("#my_id").innerText); // Hello dear!
+console.log($(".first-item").innerText); // I am Ababil
+console.log($("[custom_attribute='atributeA']").innerText); // age 21`,
+    "index.js"
+  );
+});
+
+$("#index-html").addEventListener("click", () => {
+  copyToClipBoard(
+    `<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Manipulate DOM like dream 😊</title>
+      </head>
+      <body>
+
+        <p id="my_id">Hello dear!</p>
+        <h2>This is h2 tag</h2>
+        <ul>
+          <li class="first-item">I am Ababil</li>
+          <li custom_attribute="atributeA">age 21</li>
+          <li>JavaScript Programmer</li>
+        </ul>
+
+        <!-- include [DOMget source] before other script tags  -->
+        <script src="https://domget.surge.sh/js/v1.js"></script>
+        <script src="./index.js"></script>
+      </body>
+    </html>`,
+    "index.html"
+  );
 });
