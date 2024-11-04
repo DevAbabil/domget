@@ -95,27 +95,27 @@ console.log($("[custom_attribute='atributeA']").innerText); // age 21`,
 $("#index-html").addEventListener("click", () => {
   copyToClipBoard(
     `<!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Manipulate DOM like dream 😊</title>
-      </head>
-      <body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulate DOM like dream 😊</title>
+  </head>
+  <body>
 
-        <p id="my_id">Hello dear!</p>
-        <h2>This is h2 tag</h2>
-        <ul>
-          <li class="first-item">I am Ababil</li>
-          <li custom_attribute="atributeA">age 21</li>
-          <li>JavaScript Programmer</li>
-        </ul>
+    <p id="my_id">Hello dear!</p>
+    <h2>This is h2 tag</h2>
+    <ul>
+      <li class="first-item">I am Ababil</li>
+      <li custom_attribute="atributeA">age 21</li>
+      <li>JavaScript Programmer</li>
+    </ul>
 
-        <!-- include [DOMget source] before other script tags  -->
-        <script src="https://domget.surge.sh/js/v1.js"></script>
-        <script src="./index.js"></script>
-      </body>
-    </html>`,
-    "index.html"
+    <!-- include [DOMget source] before other script tags  -->
+    <script src="https://domget.surge.sh/js/v1.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>`,
+    "HTML startup Template"
   );
 });
