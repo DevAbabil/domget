@@ -544,10 +544,6 @@ video {
 .hidden{
   display: none;
 }
-.size-\[100px\]{
-  width: 100px;
-  height: 100px;
-}
 .size-\[70px\]{
   width: 70px;
   height: 70px;
@@ -560,6 +556,9 @@ video {
 }
 .h-full{
   height: 100%;
+}
+.h-screen{
+  height: 100vh;
 }
 .w-\[310px\]{
   width: 310px;

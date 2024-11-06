@@ -43,7 +43,7 @@ const DOMgetModulSettimouteId = setTimeout(() => {
   // initiate highlightjs after display domgetModuleSource list
   hljs.highlightAll();
   clearInterval(DOMgetModulSettimouteId);
-}, 200);
+}, 500);
 
 const copyButton = () => {
   $(".copy_button").forEach((button) => {
@@ -65,6 +65,7 @@ const copyToClipBoard = (value, context = "") => {
 
 const removeLoaderId = setTimeout(() => {
   $("#loader").remove();
+  $("html").classList.remove("overflow-hidden");
   $("body").classList.remove("overflow-hidden");
   clearTimeout(removeLoaderId);
 }, 1000);

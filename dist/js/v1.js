@@ -62,8 +62,7 @@ window.location.hostname === atob("MTI3LjAuMC4x") || window.location.hostname ==
     `;
       const style = document.createElement("style");
       style.setAttribute("style-for", "domget");
-      style.innerHTML = ` 
-      #DOMgetError {
+      style.innerHTML = `#DOMgetError {
         width: 100%;
         height: 100vh;
         position: fixed;
