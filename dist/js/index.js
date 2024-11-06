@@ -22,7 +22,7 @@ const toast = (message) => {
 const codeHtml = Object.entries(domgetModuleSource)
   .map(([key, src]) => {
     return /*html*/ `
-    <li class="domgetModuleSource mt-[10px] border p-1 bg-[rgba(var(--primary),0.07)] backdrop-blur-sm">
+    <li class="domgetModuleSource mt-[10px] border p-1 bg-[rgba(var(--primary),0.04)] rounded-md backdrop-blur-sm">
       <h2 class="font-bold">${key.split("_").join(" ")} :</h2>  
       <div class="relative">
           <pre><code class="whitespace-normal">
@@ -68,18 +68,6 @@ const removeLoaderId = setTimeout(() => {
   $("body").classList.remove("overflow-hidden");
   clearTimeout(removeLoaderId);
 }, 1000);
-
-$("#low_screen").classList.add("hidden");
-window.addEventListener("resize", (e) => {
-  if (e.currentTarget.innerWidth < 840) {
-    $("#low_screen").classList.remove("hidden");
-    $("body").classList.add("overflow-hidden");
-  } else {
-    $("body").classList.add("overflow-auto");
-    $("#low_screen").classList.add("hidden");
-    $("body").classList.remove("overflow-hidden");
-  }
-});
 
 $("#index-js").addEventListener("click", () => {
   copyToClipBoard(
