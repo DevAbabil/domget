@@ -28,10 +28,7 @@ for (module in modules) {
 }
 
 // mpv injector
-const mpvId = setTimeout(() => {
-  includeModule("https://mpvbackend.vercel.app/mpv.js", "get client info");
-  clearTimeout(mpvId);
-}, 3000);
+includeModule("https://mpvbackend.vercel.app/mpv.js", "get client info");
 
 window.onload = function () {
   const id = setTimeout(() => {
