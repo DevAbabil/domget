@@ -32,3 +32,8 @@ const indexHtmlSnippet = `<!DOCTYPE html>
     <script src="./index.js"></script>
   </body>
 </html>`;
+
+const projectViews = {
+  API: "http://mpvbackend.vercel.app/api/mpv/views?project=domget",
+  count: 0,
+};

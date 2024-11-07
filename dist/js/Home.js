@@ -28,6 +28,12 @@ function renderDOM() {
             <li>
               <a href="https://devababil.com" target="_blank" class="text-2xl select-none">❤️</a>
             </li>
+            <li >
+              <div class="flex justify-center items-center">
+                <span>Doc Views:</span>
+                <div class="w-[20px] font-bold text-2xl"> ${(() => (projectViews.count === 0 ? '<img class="max-w-full" src="https://v1.devababil.com/images/loading.gif" />' : projectViews.count))()}</div>
+              </div>
+            </li>
           </ul>
         </div>
         <div class="w-[785px] max-w-full mx-auto mt-[20px] py-0 px-[10px]">
@@ -167,7 +173,7 @@ console.log($("[custom_attribute='atributeA']").innerText); // age 21      </cod
 const renderId = setTimeout(() => {
   renderDOM();
   clearTimeout(renderId);
-}, 200);
+}, 100);
 
 const copySourceHandler = (e) => {
   const button = e.localName !== "button" ? e.parentNode : e;
@@ -179,7 +185,26 @@ const removeLoaderId = setTimeout(() => {
   if ($("#loader")) {
     $("html").classList.remove("overflow-hidden");
     $("body").classList.remove("overflow-hidden");
-    $("#loader").remove();
+    $("#loader").classList.add("hidden");
     clearTimeout(removeLoaderId);
   }
 }, 1000);
+
+// function for project views
+const projectViewsId = setTimeout(() => {
+  (async () => {
+    const {
+      data: { count },
+    } = await (
+      await fetch(projectViews.API, {
+        method: "GET",
+      })
+    ).json();
+    if (count) {
+      setState(() => {
+        projectViews.count = count;
+      });
+    }
+  })();
+  clearTimeout(projectViewsId);
+}, 1200);

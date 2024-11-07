@@ -1,6 +1,9 @@
 function setState(callback) {
   callback();
   renderDOM();
+  // reintiate highlightJs
+  hljs.highlightAll();
+  $("#loader").remove();
 }
 
 const toast = (message) => {
