@@ -7,7 +7,7 @@ const state = {
 
 const projectViews = () => {
   return /*html*/ `
-  ${(() => (state.count === 0 ? '<img class="max-w-full" src="./loading.gif" />' : state.count))()}
+  ${(() => (state.count === 0 ? '<img class="max-w-full size-[18px]" src="./loading.gif" />' : state.count))()}
    `;
 };
 

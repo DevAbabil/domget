@@ -19,10 +19,12 @@ const header = () => {
         <a href="https://devababil.com" target="_blank" class="text-2xl select-none">❤️</a>
       </li>
       <li >
-        <div class="flex justify-center items-center">
-          <span>Doc Views:</span>
-          <div class="w-[20px] font-bold text-2xl"> 
-            ${projectViews()}
+        <div class="flex justify-center items-center select-none">
+          <div class="text-[17px] leading-[18px]">
+            <span class="font-semibold text-gray-600">Doc Views</span>
+            <div class="w-auto font-bold text-gray-400 flex justify-center items-center"> 
+              ${projectViews()}
+            </div>
           </div>
         </div>
       </li>
