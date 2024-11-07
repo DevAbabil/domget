@@ -10,7 +10,7 @@ const app = () => {
   return `
   <div>
     ${home()}
-    ${state.loading ? loader() : ""}
+    ${loader(state.loading)}
   </div>`;
 };
 
@@ -19,12 +19,13 @@ window.addEventListener("DOMContentLoaded", () => {
     setState(() => {
       state.loading = false;
     });
-    /*remove overflow-hidden from html and body after loaded content*/ {
+    /*remove overflow-hidden from html and body after loaded content*/
+    {
       $("html").classList.remove("overflow-hidden");
       $("body").classList.remove("overflow-hidden");
     }
     clearTimeout(id);
-  }, 500);
+  }, 1000);
 });
 
 export default app;
