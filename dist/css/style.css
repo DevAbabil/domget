@@ -548,6 +548,10 @@ video {
   width: 70px;
   height: 70px;
 }
+.size-\[35px\]{
+  width: 35px;
+  height: 35px;
+}
 .h-\[310px\]{
   height: 310px;
 }
