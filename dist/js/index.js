@@ -13,13 +13,14 @@ const modules = {
     ["https://cdn.jsdelivr.net/npm/toastify-js", "tostify"],
   ],
   CUSTOM: [
-    ["./js/commonConfig.js", "common configuration"],
     ["./js/state.js", "All state source"],
+    ["./js/commonConfig.js", "common configuration"],
     ["./js/Home.js", "home page"],
   ],
 };
 
 // load modules
+
 for (module in modules) {
   modules[module].forEach(([path, context]) => {
     includeModule(path, context);

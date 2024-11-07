@@ -164,7 +164,10 @@ console.log($("[custom_attribute='atributeA']").innerText); // age 21      </cod
 }
 
 // initial render
-renderDOM();
+const renderId = setTimeout(() => {
+  renderDOM();
+  clearTimeout(renderId);
+}, 200);
 
 const copySourceHandler = (e) => {
   const button = e.localName !== "button" ? e.parentNode : e;
