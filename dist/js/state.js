@@ -34,6 +34,6 @@ const indexHtmlSnippet = `<!DOCTYPE html>
 </html>`;
 
 const projectViews = {
-  API: "http://mpvbackend.vercel.app/api/mpv/views?project=domget",
+  API: "https://mpvbackend.vercel.app/api/mpv/views?project=domget",
   count: 0,
 };
