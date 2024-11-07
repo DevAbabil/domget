@@ -1,12 +1,12 @@
 function renderDOM() {
   $("#root").innerHTML = /*html*/ `
   <main>
-    <div id="loader" class="absolute z-10 h-screen w-full max-w-full top-0 left-0 bg-[white] flex justify-center items-center flex-col gap-y-[2px]">
+    <div id="loader" class="absolute z-10 h-screen w-full max-w-full top-0 left-0 bg-[white] flex  justify-center items-center flex-col gap-y-[2px]">
       <div class="size-[70px] md:size-[100px] border-t-[4px] border-b-[4px] border-[rgba(var(--text))] rounded-full spin-loader"></div>
       <div class="text-2xl font-bold text-[rgba(var(--text),1)]">Loading...</div>
     </div>
     <div>
-      <div class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+      <div class="fixed inset-0 -z-10 h-full w-full bg-[rgba(var(--primary),0.05)] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
         <div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div>
       </div>
     </div>
@@ -171,3 +171,12 @@ const copySourceHandler = (e) => {
   const domgetSourceLink = `<script src="${domgetModuleSource[button.getAttribute("domgetModuleSource")]}"></script>`;
   copyToClipBoard(domgetSourceLink, `DOMget source ${button.getAttribute("domgetModuleSource").split("_").join(" ")}`);
 };
+
+const removeLoaderId = setTimeout(() => {
+  if ($("#loader")) {
+    $("html").classList.remove("overflow-hidden");
+    $("body").classList.remove("overflow-hidden");
+    $("#loader").remove();
+    clearTimeout(removeLoaderId);
+  }
+}, 1000);

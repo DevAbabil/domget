@@ -1,19 +1,7 @@
-// initiate highlight js
-hljs.highlightAll();
-
 function setState(callback) {
   callback();
   renderDOM();
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-  const id = setTimeout(() => {
-    $("#loader").remove();
-    $("html").classList.remove("overflow-hidden");
-    $("body").classList.remove("overflow-hidden");
-    clearTimeout(id);
-  }, 300);
-});
 
 const toast = (message) => {
   Toastify({
