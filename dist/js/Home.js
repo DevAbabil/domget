@@ -31,7 +31,7 @@ function renderDOM() {
             <li >
               <div class="flex justify-center items-center">
                 <span>Doc Views:</span>
-                <div class="w-[20px] font-bold text-2xl"> ${(() => (projectViews.count === 0 ? '<img class="max-w-full" src="https://v1.devababil.com/images/loading.gif" />' : projectViews.count))()}</div>
+                <div class="w-[20px] font-bold text-2xl"> ${(() => (projectViews.count === 0 ? '<img class="max-w-full" src="./images/loading.gif" />' : projectViews.count))()}</div>
               </div>
             </li>
           </ul>
