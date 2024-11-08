@@ -1,8 +1,0 @@
-# robots.txt
-User-agent: *
-
-Allow: /
-
-# Disallowed Sub-Directories
-
-Sitemap: https://domget.netlify.app/sitemap.xml
