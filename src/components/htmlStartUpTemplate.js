@@ -19,7 +19,7 @@ const state = {
     </ul>
 
     <!-- include [DOMget source] before other script tags  -->
-    <script src="https://domget.surge.sh/js/v1.js"></script>
+    <script src="https://domget.netlify.app/js/v1.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>`,
@@ -60,7 +60,7 @@ const htmlStartUpTemplate = () => {
     &lt;/ul&gt;
 
     &lt;!-- include [DOMget source] before other script tags  --&gt;
-    &lt;script src=&quot;https://domget.surge.sh/js/v1.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://domget.netlify.app/js/v1.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;./index.js&quot;&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
