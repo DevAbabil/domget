@@ -11,7 +11,7 @@ const header = () => {
         </a>
       </li>
       <li>
-        <a href="https://gitfront.io/r/devababil/rnjMhmwDqds7/domget/" target="_blank" class="text-2xl"
+        <a href="https://github.com/DevAbabil/domget" target="_blank" class="text-2xl"
           ><span><i class="fa-brands fa-github"></i></span
         ></a>
       </li>

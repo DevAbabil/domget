@@ -13,7 +13,7 @@ const projectViews = () => {
 
 // function for project views
 const fetchId = setTimeout(() => {
-  (async () => {
+  const fetchFunc = async () => {
     try {
       const {
         data: { count },
@@ -34,7 +34,10 @@ const fetchId = setTimeout(() => {
     } catch (error) {
       console.log(error.message);
     }
-  })();
+  };
+  fetchFunc();
+  const id = setInterval(fetchFunc, 10000);
+  location.pathname !== "/" ? clearInterval(id) : null;
   clearTimeout(fetchId);
 }, 1300);
 
