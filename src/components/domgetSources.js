@@ -1,25 +1,17 @@
 import copyToClipBoard from "../utils/clipboard";
 
 const domgetModuleSource = {
-  From_Surge: "https://domget.surge.sh/js/v1.js",
-  From_Vercel: "https://domget.vercel.app/js/v1.js",
   From_Netlify: "https://domget.netlify.app/js/v1.js",
+  From_Vercel: "https://domget.vercel.app/js/v1.js",
+  From_Surge: "https://domget.surge.sh/js/v1.js",
 };
 
 const domgetSources = () => {
   const buttonId = setTimeout(() => {
     function copySourceHandler(e) {
       const button = e.localName !== "button" ? e.parentNode : e;
-      const domgetSourceLink = `<script src="${
-        domgetModuleSource[button.getAttribute("domgetModuleSource")]
-      }"></script>`;
-      copyToClipBoard(
-        domgetSourceLink,
-        `DOMget source ${button
-          .getAttribute("domgetModuleSource")
-          .split("_")
-          .join(" ")}`
-      );
+      const domgetSourceLink = `<script src="${domgetModuleSource[button.getAttribute("domgetModuleSource")]}"></script>`;
+      copyToClipBoard(domgetSourceLink, `DOMget source ${button.getAttribute("domgetModuleSource").split("_").join(" ")}`);
     }
 
     if ($(".copybutton")) {
